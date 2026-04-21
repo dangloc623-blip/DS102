@@ -71,5 +71,4 @@ print(f"Precision (Test): {precision:.4f}")
 print(f"Recall (Test):    {recall:.4f}")
 print(f"F1 Score (Test):  {f1:.4f}")
 
-print("\nClassification Report (Test):")
 print(classification_report(y_test, y_pred_test, target_names=['NORMAL (-1)', 'PNEUMONIA (1)']))
