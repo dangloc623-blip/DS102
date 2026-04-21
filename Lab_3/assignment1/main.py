@@ -1,7 +1,7 @@
 import os
 import cv2 as cv
 import numpy as np
-from sklearn.metrics import precision_score, recall_score, f1_score, classification_report
+from sklearn.metrics import precision_score, recall_score, f1_score
 from svm import SVM
 
 base_dir = r"D:\chest_xray"
