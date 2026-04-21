@@ -40,7 +40,7 @@ x_train = x_train / 255.0
 x_val = x_val / 255.0
 x_test = x_test / 255.0
 
-model = SVM(C=1.0, learning_rate=0.0001, n_iters=100)
+model = SVM(C=1.0, learning_rate=0.0001, epochs=100)
 model.fit(x_train, y_train)
 
 y_pred_val = model.predict(x_val)
@@ -53,8 +53,6 @@ precision = precision_score(y_test, y_pred_test)
 recall = recall_score(y_test, y_pred_test)
 f1 = f1_score(y_test, y_pred_test)
 
-print(f"Precision (Test): {precision:.4f}")
-print(f"Recall (Test):    {recall:.4f}")
-print(f"F1 Score (Test):  {f1:.4f}")
-
-print(classification_report(y_test, y_pred_test, target_names=['NORMAL (-1)', 'PNEUMONIA (1)']))
+print(f"Precision: {precision:.4f}")
+print(f"Recall:    {recall:.4f}")
+print(f"F1 Score:  {f1:.4f}")

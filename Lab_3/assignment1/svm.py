@@ -1,10 +1,10 @@
 import numpy as np
 
 class SVM:
-    def __init__(self, C: float = 30.0, learning_rate: float = 0.0001, n_iters: int = 100):
+    def __init__(self, C: float = 30.0, learning_rate: float = 0.0001, epochs: int = 100):
         self.C = C
         self.lr = learning_rate
-        self.n_iters = n_iters
+        self.epochs = epochs
         self.w = None
         self.b = None
 
@@ -13,7 +13,7 @@ class SVM:
         self.w = np.zeros(n_features)
         self.b = 0.0
 
-        for epoch in range(self.n_iters):
+        for epoch in range(self.epochs):
             indices = np.arange(n_samples)
             np.random.shuffle(indices)
 
